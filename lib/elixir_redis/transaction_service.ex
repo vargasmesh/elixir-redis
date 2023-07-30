@@ -1,6 +1,5 @@
 defmodule ElixirRedis.TransactionService do
   import Ecto.Query
-  import DateTime
 
   alias ElixirRedis.Transaction
   alias ElixirRedis.Repo
