@@ -1,9 +1,6 @@
 services:
   redis:
-    image: redis:7
+    image: redis/redis-stack
     ports:
       - 6379:6379
-  redisinsight:
-    image: redislabs/redisinsight
-    ports:
       - 8001:8001
