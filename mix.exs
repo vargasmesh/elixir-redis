@@ -23,7 +23,8 @@ defmodule ElixirRedis.MixProject do
   defp deps do
     [
       {:bandit, ">= 0.7.7"},
-      {:ecto_sqlite3, "~> 0.10"}
+      {:ecto_sqlite3, "~> 0.10"},
+      {:redix, "~> 1.1"},
     ]
   end
 end
