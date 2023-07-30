@@ -16,7 +16,12 @@ defmodule ElixirRedisWeb.Router do
       case Redix.command(["JSON.GET", hash]) do
         {:ok, nil} ->
           result = Jason.encode!(TransactionService.calculate_total_received_amount(hash))
-          Redix.command(["JSON.SET", hash, "$", result])
+
+          Redix.transaction_pipeline([
+            ["JSON.SET", hash, "$", result],
+            ["EXPIRE", hash, "60"]
+          ])
+
           result
 
         {:ok, value} ->
