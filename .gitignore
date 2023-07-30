@@ -24,4 +24,6 @@ elixir_redis-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
-*.sqlite
+db/*
+
+.DS_Store
