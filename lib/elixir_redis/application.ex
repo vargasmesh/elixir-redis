@@ -4,6 +4,7 @@ defmodule ElixirRedis.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      ElixirRedis.Repo,
       {Bandit, scheme: :http, plug: ElixirRedisWeb.Router, port: 8000}
     ]
 

@@ -22,7 +22,8 @@ defmodule ElixirRedis.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:bandit, ">= 0.7.7"}
+      {:bandit, ">= 0.7.7"},
+      {:ecto_sqlite3, "~> 0.10"}
     ]
   end
 end
