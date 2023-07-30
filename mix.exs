@@ -25,6 +25,7 @@ defmodule ElixirRedis.MixProject do
       {:bandit, ">= 0.7.7"},
       {:ecto_sqlite3, "~> 0.10"},
       {:redix, "~> 1.1"},
+      {:jason, "~> 1.4"}
     ]
   end
 end
